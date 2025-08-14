@@ -4,6 +4,8 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Carlos Siason — Portfolio</title>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
     /* Minimalist clean styling */
@@ -22,6 +24,11 @@
     .fade-in{animation:fadeIn .28s ease-in-out}
     @keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
     footer small{color:var(--muted)}
+    .project-card{border-radius:12px;overflow:hidden;transition:transform 0.2s ease}
+    .project-card:hover{transform:translateY(-4px)}
+    .project-placeholder{height:200px;background:linear-gradient(135deg, #667eea 0%, #764ba2 100%);display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;font-weight:500}
+    .nav-btn{width:40px;height:40px;border-radius:50%;border:1px solid #dee2e6;background:white;display:flex;align-items:center;justify-content:center;transition:all 0.2s ease;cursor:pointer}
+    .nav-btn:hover{background:#f8f9fa;border-color:#0d6efd;color:#0d6efd}
   </style>
 </head>
 <body>
@@ -44,36 +51,84 @@
           <p class="mb-2"><strong class="section-title">Summary</strong></p>
           <p id="profile-summary" class="small text-muted">A creative and highly adaptable developer with experience in designing, developing, and implementing scalable applications and solutions. Proficient in Java, PHP, SQL, and React-Native. Focused on React full-stack development across web, mobile, and database development.</p>
 
-          <div class="mt-3">
-            <p class="mb-1"><strong class="section-title">Quick Actions</strong></p>
-            <div class="d-grid">
-              <button id="btn-experience" class="btn btn-outline-primary btn-sm nav-pill nav-link text-start" data-section="experience">Experience</button>
-              <button id="btn-education" class="btn btn-outline-secondary btn-sm nav-pill nav-link text-start" data-section="education">Education</button>
-              <button id="btn-skills" class="btn btn-outline-success btn-sm nav-pill nav-link text-start" data-section="skills">Skills</button>
-              <button id="btn-activities" class="btn btn-outline-info btn-sm nav-pill nav-link text-start" data-section="activities">Activities & Achievements</button>
+          <hr>
+        </div>
+      </div>
+
+      <!-- Right column: projects showcase -->
+      <div class="col-12 col-md-8">
+        <div class="card p-4 border-0 shadow-sm">
+          <div class="d-flex justify-content-between align-items-center mb-4">
+            <div>
+              <h3 class="mb-1">Featured Projects</h3>
+              <p class="meta mb-0">Showcase of my development work</p>
+            </div>
+            <div>
+              <span class="badge bg-primary">Portfolio</span>
             </div>
           </div>
 
-          <hr>
-
-          <div class="d-flex justify-content-between align-items-center">
-            <div>
-              <small class="meta">Clean • Minimalist • Responsive</small>
+          <div class="row g-4">
+            <!-- Capstone Project -->
+            <div class="col-12 col-md-6">
+              <div class="card project-card border-0 shadow-sm h-100">
+                <div class="project-placeholder">
+                  <i class="fas fa-code me-2"></i>Capstone Project
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">Capstone Projects</h5>
+                  <p class="card-text text-muted">Full-stack applications built with JavaScript PHP, and SQL. Managed team development and delivered scalable solutions.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">2024 - 2025</small>
+                    <div>
+                      <span class="badge bg-light text-dark me-1">JavaScript</span>
+                      <span class="badge bg-light text-dark me-1">PHP</span>
+                      <span class="badge bg-light text-dark">SQL</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div>
-              <small class="meta">HTML · Bootstrap · JS</small>
+
+            <!-- Web Portfolio -->
+            <div class="col-12 col-md-6">
+              <div class="card project-card border-0 shadow-sm h-100">
+                <img src="pic.jpg" alt="Web Portfolio Preview" style="height:200px;object-fit:cover;">
+                <div class="card-body">
+                  <h5 class="card-title">Web Portfolio</h5>
+                  <p class="card-text text-muted">Responsive portfolio website showcasing clean design principles with Bootstrap and modern web technologies.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <small class="text-muted">2025</small>
+                    <div>
+                      <span class="badge bg-light text-dark me-1">HTML</span>
+                      <span class="badge bg-light text-dark me-1">Bootstrap</span>
+                      <span class="badge bg-light text-dark">JavaScript</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- Right column: dynamic content card -->
-      <div class="col-12 col-md-8">
+    <!-- Full-width Experience/Education/Skills/Activities section -->
+    <div class="row mt-5">
+      <div class="col-12">
         <div class="card p-4 border-0 shadow-sm" id="content-card">
           <div class="d-flex justify-content-between align-items-start mb-3">
-            <div>
-              <h3 id="content-title" class="mb-1">Experience</h3>
-              <p id="content-subtitle" class="meta mb-0">2024 - 2025 · Capstone Project Manager / Developer</p>
+            <div class="d-flex align-items-center gap-3">
+              <button class="nav-btn" id="prev-btn" onclick="navigateSection(-1)">
+                <ion-icon name="arrow-back-outline"></ion-icon>
+              </button>
+              <div>
+                <h3 id="content-title" class="mb-1">Experience</h3>
+                <p id="content-subtitle" class="meta mb-0">2024 - 2025 · Capstone Project Manager / Developer</p>
+              </div>
+              <button class="nav-btn" id="next-btn" onclick="navigateSection(1)">
+                <ion-icon name="arrow-forward-outline"></ion-icon>
+              </button>
             </div>
             <div>
               <span class="badge bg-light text-dark">Student • Developer</span>
@@ -101,7 +156,6 @@
               </div>
             </div>
           </div>
-
         </div>
 
         <footer class="mt-3 text-center">
@@ -162,6 +216,9 @@
     };
 
     // Initialize
+    let currentSectionIndex = 0;
+    const sectionOrder = ['experience', 'education', 'skills', 'activities'];
+
     function setActive(sectionKey){
       const s = sections[sectionKey];
       if(!s) return;
@@ -177,23 +234,16 @@
       bodyEl.innerHTML = s.body;
       bodyEl.classList.add('fade-in');
 
-      // update active button styles
-      document.querySelectorAll('[data-section]').forEach(b => {
-        if(b.dataset.section === sectionKey){
-          b.classList.remove('btn-outline-secondary','btn-outline-success','btn-outline-info','btn-outline-primary');
-          b.classList.add('btn-primary');
-        } else {
-          // reset to outline using original mapping
-          b.classList.remove('btn-primary');
-          if(b.dataset.section === 'experience') b.classList.add('btn-outline-primary');
-          if(b.dataset.section === 'education') b.classList.add('btn-outline-secondary');
-          if(b.dataset.section === 'skills') b.classList.add('btn-outline-success');
-          if(b.dataset.section === 'activities') b.classList.add('btn-outline-info');
-        }
-      });
+      // Update current index
+      currentSectionIndex = sectionOrder.indexOf(sectionKey);
     }
 
-    // attach handlers
+    function navigateSection(direction) {
+      currentSectionIndex = (currentSectionIndex + direction + sectionOrder.length) % sectionOrder.length;
+      setActive(sectionOrder[currentSectionIndex]);
+    }
+
+    // attach handlers (keeping for backward compatibility if any buttons remain)
     document.querySelectorAll('[data-section]').forEach(b => {
       b.addEventListener('click', e => {
         setActive(b.dataset.section);
@@ -203,14 +253,10 @@
     // initial state
     setActive('experience');
 
-    // Small utility: keyboard switch (left/right)
+    // Enhanced keyboard navigation
     document.addEventListener('keydown', e => {
-      const order = ['experience','education','skills','activities'];
-      const current = document.querySelector('[data-section].btn-primary')?.dataset.section || 'experience';
-      let idx = order.indexOf(current);
-      if(e.key === 'ArrowRight') idx = (idx + 1) % order.length;
-      if(e.key === 'ArrowLeft') idx = (idx - 1 + order.length) % order.length;
-      setActive(order[idx]);
+      if(e.key === 'ArrowRight') navigateSection(1);
+      if(e.key === 'ArrowLeft') navigateSection(-1);
     });
   </script>
 
