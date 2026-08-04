@@ -1,184 +1,396 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carlos Hilarion Siason | Online Portfolio</title>
+    <title>Carlos Hilarion Siason | Web Developer / IT Support</title>
+    <meta name="description"
+        content="Portfolio of Carlos Hilarion Siason — Information Technology Specialist skilled in web development, system development, PHP, MySQL, Java, and Python.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- HEADER SECTION -->
-    <header class="header">
-        <div class="container header-content">
-            <!-- Add your profile image here -->
-            <img src="me.jfif" alt="Carlos Hilarion Siason" class="profile-img">
+    <!-- NAVIGATION -->
+    <nav class="nav" id="main-nav">
+        <div class="nav-inner">
+            <span class="nav-logo">CHS</span>
+            <ul class="nav-links">
+                <li><a href="#hero" id="nav-hero">Home</a></li>
+                <li><a href="#about" id="nav-about">About</a></li>
+                <li><a href="#experience" id="nav-experience">Experience</a></li>
+                <li><a href="#projects" id="nav-projects">Projects</a></li>
+                <li><a href="#skills" id="nav-skills">Skills</a></li>
+                <li><a href="#education" id="nav-education">Education</a></li>
+            </ul>
+        </div>
+    </nav>
 
-            <div class="header-text">
-                <h1>Carlos Hilarion Siason</h1>
-                <p class="subtitle">Information Technology Specialist</p>
-                <div class="contact-info">
-                    <p>📍 D.Gamboa St. Employees Subd., Brgy Mambulac, Silay City, Neg. Occ.</p>
-                    <p>📞 09617599874 | ✉️ <a
-                            href="mailto:carloshilarionsiason@gmail.com">carloshilarionsiason@gmail.com</a></p>
+    <!-- HERO / HEADER -->
+    <header class="hero" id="hero">
+        <div class="hero-grid">
+            <div class="hero-info">
+                <p class="hero-eyebrow">Hello, I'm</p>
+                <h1 class="hero-name">Carlos Hilarion<br><span class="hero-surname">Siason</span></h1>
+                <p class="hero-role">Web Developer / IT Support</p>
+                <div class="hero-tags">
+                    <span class="tag">Web Development</span>
+                    <span class="tag">System Development</span>
+                    <span class="tag">Tech Support</span>
+                </div>
+                <div class="hero-contact">
+                    <a href="mailto:carloshilarionsiason@gmail.com" class="contact-link" id="contact-email">
+                        <span class="contact-icon">&#9993;</span>
+                        carloshilarionsiason@gmail.com
+                    </a>
+                    <a href="tel:09617599874" class="contact-link" id="contact-phone">
+                        <span class="contact-icon">&#9742;</span>
+                        09617599874
+                    </a>
+                    <span class="contact-link" id="contact-location">
+                        <span class="contact-icon">&#128205;</span>
+                        Silay City, Negros Occidental
+                    </span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn-primary" id="cta-projects">View Projects</a>
+                    <a href="mailto:carloshilarionsiason@gmail.com" class="btn-outline" id="cta-contact">Get In
+                        Touch</a>
+                </div>
+            </div>
+            <div class="hero-photo-wrap">
+                <div class="hero-photo-ring">
+                    <img src="me.jfif" alt="Carlos Hilarion Siason" class="hero-photo" id="hero-photo">
+                </div>
+                <div class="hero-stat-badge badge-top" id="badge-exp">
+                    <span class="badge-num">2+</span>
+                    <span class="badge-label">Years Experience</span>
+                </div>
+                <div class="hero-stat-badge badge-bottom" id="badge-projects">
+                    <span class="badge-num">4+</span>
+                    <span class="badge-label">Projects Built</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <main class="container">
-        <!-- ABOUT SECTION -->
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <p>Detail-oriented Information Technology applicant specializing in System Development and Web Technologies.
-                Skilled in web application development, technical troubleshooting, and hardware maintenance. Proficient
-                in Java, PHP, and Python, with a strong ability to diagnose and resolve software, hardware, and
-                system-related issues. Eager to apply technical knowledge and provide dependable development and IT
-                support in a professional environment.</p>
+    <!-- MAIN CONTENT GRID -->
+    <main class="page-grid" id="main-content">
+
+        <!-- ABOUT -->
+        <section id="about" class="panel panel-about">
+            <div class="panel-label">01 / About</div>
+            <h2 class="panel-title">About Me</h2>
+            <p class="about-text">
+                Detail-oriented Information Technology applicant specializing in
+                <strong>System Development</strong> and <strong>Web Technologies</strong>.
+                Skilled in web application development, technical troubleshooting, and hardware
+                maintenance. Proficient in <strong>Java</strong>, <strong>PHP</strong>, and
+                <strong>Python</strong>, with a strong ability to diagnose and resolve software,
+                hardware, and system-related issues. Eager to apply technical knowledge and provide
+                dependable development and IT support in a professional environment.
+            </p>
+            <div class="about-highlights">
+                <div class="highlight-item" id="highlight-dev">
+                    <span class="highlight-icon">&#128187;</span>
+                    <div>
+                        <strong>Full-Stack Dev</strong>
+                        <p>PHP &middot; MySQL &middot; JavaScript</p>
+                    </div>
+                </div>
+                <div class="highlight-item" id="highlight-mobile">
+                    <span class="highlight-icon">&#128241;</span>
+                    <div>
+                        <strong>Mobile Dev</strong>
+                        <p>React Native &middot; Firebase</p>
+                    </div>
+                </div>
+                <div class="highlight-item" id="highlight-support">
+                    <span class="highlight-icon">&#128295;</span>
+                    <div>
+                        <strong>IT Support</strong>
+                        <p>Networking &middot; Hardware</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <!-- EXPERIENCE SECTION -->
-        <section id="experience" class="section">
-            <h2>Experience</h2>
+        <!-- EXPERIENCE -->
+        <section id="experience" class="panel panel-experience">
+            <div class="panel-label">02 / Experience</div>
+            <h2 class="panel-title">Experience</h2>
             <div class="timeline">
-                <div class="timeline-item">
-                    <h3>Philippine Biodiversity Conservation Foundation Inc.</h3>
-                    <span class="date">2026</span>
-                    <p>Developed a centralized web-based platform for managing and displaying departmental reports
-                        during a 486-hour On-the-Job Training program. The system streamlined data accessibility,
-                        improved report organization, and enhanced information management processes. Utilized PHP and
-                        MySQL for backend development, database management, and system implementation.</p>
+                <div class="tl-item" id="exp-pbcfi">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-header">
+                            <h3>Philippine Biodiversity Conservation Foundation Inc.</h3>
+                            <span class="tl-date">2026</span>
+                        </div>
+                        <p class="tl-role">IT Intern &mdash; OJT (486 hours)</p>
+                        <p class="tl-desc">Developed a centralized web-based platform for managing and displaying
+                            departmental reports. Streamlined data accessibility, improved report organization, and
+                            enhanced information management processes using <strong>PHP</strong> and
+                            <strong>MySQL</strong> with Codeigniter framework.
+                        </p>
+                        <div class="tl-tags">
+                            <span class="chip">PHP</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Codeigniter</span>
+                            <span class="chip">cPanel</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="timeline-item">
-                    <h3>Capstone Project Manager and Developer</h3>
-                    <span class="date">2025 - 2026</span>
-                    <p>Spearheaded the design and development of a web-based application for storing and managing
-                        unpublished research outputs. Applied Agile development methodologies to plan and manage
-                        development sprints, Developed the application using PHP and MySQL, implementing database-driven
-                        functionalities and an efficient research management workflow.</p>
+                <div class="tl-item" id="exp-capstone">
+                    <div class="tl-dot"></div>
+                    <div class="tl-body">
+                        <div class="tl-header">
+                            <h3>Capstone Project Manager &amp; Developer</h3>
+                            <span class="tl-date">2025 &ndash; 2026</span>
+                        </div>
+                        <p class="tl-role">Lead Developer</p>
+                        <p class="tl-desc">Spearheaded the design and development of a web-based application for
+                            storing and managing unpublished research outputs. Applied <strong>Agile</strong>
+                            development methodologies to plan and manage development sprints. Built using
+                            <strong>PHP</strong> and <strong>MySQL</strong> with a database-driven workflow.
+                        </p>
+                        <div class="tl-tags">
+                            <span class="chip">PHP</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Agile</span>
+                            <span class="chip">GitHub</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
-        <section id="projects" class="section">
-            <h2>Projects</h2>
-            <div class="grid-container">
-                <!-- Project 1 -->
-                <div class="card">
-                    <!-- Add project thumbnail here -->
-                    <img src="philbio.png" alt="PBCFI Website" class="project-img">
-                    <div class="card-content">
+        <!-- PROJECTS -->
+        <section id="projects" class="panel panel-projects">
+            <div class="panel-label">03 / Projects</div>
+            <h2 class="panel-title">Projects</h2>
+            <div class="projects-grid">
+
+                <div class="project-card card-featured" id="project-pbcfi">
+                    <div class="project-img-wrap">
+                        <img src="philbio.png" alt="PBCFI Website" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="https://philbio.org.ph/" target="_blank" class="overlay-btn"
+                                id="btn-pbcfi-live">View Live &#8599;</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-badge">Featured</span>
                         <h3>Philippine Biodiversity Conservation Foundation Inc. Website</h3>
-                        <p><strong>Technologies:</strong> PHP Framework (Codeigniter), MySQL, Cpanel, Git, Github</p>
-                        <a href="https://philbio.org.ph/" target="_blank" class="btn">View Live</a>
-
+                        <p>A full-featured organizational website with departmental report management, admin controls,
+                            and public-facing content.</p>
+                        <div class="project-tech">
+                            <span class="chip">Codeigniter</span>
+                            <span class="chip">PHP</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">cPanel</span>
+                            <span class="chip">Git</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="card">
-                    <!-- Add project thumbnail here -->
-                    <img src="Digiremms.jfif" alt="DigiReMMS" class="project-img">
-                    <div class="card-content">
-                        <h3>Digital Research Management and Monitoring System</h3>
-                        <p><strong>Technologies:</strong> PHP, MySQL, Github, Hostinger</p>
+                <div class="project-card" id="project-digiremms">
+                    <div class="project-img-wrap">
+                        <img src="Digiremms.jfif" alt="DigiReMMS" class="project-thumb">
+                        <div class="project-overlay">
+                            <span class="overlay-btn disabled">In Development</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Digital Research Management &amp; Monitoring System</h3>
+                        <p>Web application for storing and tracking unpublished research outputs with role-based access.
+                        </p>
+                        <div class="project-tech">
+                            <span class="chip">PHP</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Hostinger</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="card">
-                    <!-- Add project thumbnail here -->
-                    <img src="placeholder-project3.jpg" alt="Battle Shapes" class="project-img">
-                    <div class="card-content">
+                <div class="project-card" id="project-battleshapes">
+                    <div class="project-img-wrap project-img-placeholder">
+                        <div class="placeholder-icon">&#127918;</div>
+                        <div class="project-overlay">
+                            <span class="overlay-btn disabled">Local Project</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
                         <h3>Battle Shapes</h3>
-                        <p><strong>Technologies:</strong> Python, Pygame</p>
+                        <p>A 2D game built with Python and Pygame featuring shape-based combat mechanics.</p>
+                        <div class="project-tech">
+                            <span class="chip">Python</span>
+                            <span class="chip">Pygame</span>
+                        </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="card">
-                    <!-- Add project thumbnail here -->
-                    <img src="Online.png" alt="Online Portfolio" class="project-img">
-                    <div class="card-content">
+                <div class="project-card" id="project-portfolio">
+                    <div class="project-img-wrap">
+                        <img src="Online.png" alt="Online Portfolio" class="project-thumb">
+                        <div class="project-overlay">
+                            <a href="https://carlosbsit.github.io/portfolio/" target="_blank" class="overlay-btn"
+                                id="btn-portfolio-live">View Live &#8599;</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
                         <h3>Online Portfolio</h3>
-                        <p><strong>Technologies:</strong> Javascript, HTML, Github, CSS</p>
-                        <a href="https://carlosbsit.github.io/portfolio/" target="_blank" class="btn">View Live</a>
+                        <p>Personal portfolio website showcasing projects, skills, and professional background.</p>
+                        <div class="project-tech">
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">GitHub Pages</span>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
-        <!-- CERTIFICATION & EDUCATION SECTION -->
-        <div class="split-section section">
-            <div class="half">
-                <h2>Certifications & Seminars</h2>
-                <div class="item">
-                    <h3>Google I/O Extended</h3>
-                    <span class="date">Google Developer Group Bacolod | 2025</span>
-                    <p>Completed training on the application of Artificial Intelligence in modern web development.
-                        Acquired practical knowledge in leveraging AI technologies and utilizing Google Firebase for
-                        building scalable web applications, including user authentication, cloud storage, and real-time
-                        database integration.</p>
-                </div>
-            </div>
+        <!-- SKILLS -->
+        <section id="skills" class="panel panel-skills">
+            <div class="panel-label">04 / Skills</div>
+            <h2 class="panel-title">Skills</h2>
+            <div class="skills-grid">
 
-            <div class="half">
-                <h2>Education</h2>
-                <div class="item">
-                    <h3>STI West Negros University</h3>
-                    <span class="date">Bachelor of Science in Information Technology | 2022 - 2026</span>
-                    <p>Gained essential knowledge in software and web development, database management, system
-                        integration, and networking. Developed strong foundations in programming languages such as Java,
-                        PHP, MySQL, and Python.</p>
+                <div class="skill-group" id="skill-programming">
+                    <div class="skill-group-header">
+                        <span class="skill-icon">&#9881;</span>
+                        <h3>Programming</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>HTML / CSS / JavaScript</li>
+                        <li><span class="skill-dot"></span>React Native</li>
+                        <li><span class="skill-dot"></span>PHP</li>
+                        <li><span class="skill-dot"></span>Python</li>
+                        <li><span class="skill-dot"></span>Java</li>
+                        <li><span class="skill-dot"></span>SQL</li>
+                    </ul>
                 </div>
+
+                <div class="skill-group" id="skill-web">
+                    <div class="skill-group-header">
+                        <span class="skill-icon">&#127760;</span>
+                        <h3>Web Technologies</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Cpanel</li>
+                        <li><span class="skill-dot"></span>Hostinger</li>
+                        <li><span class="skill-dot"></span>MySQL / PHPMyAdmin</li>
+                        <li><span class="skill-dot"></span>Firebase / Firestore</li>
+                        <li><span class="skill-dot"></span>Bootstrap / Tailwind</li>
+                        <li><span class="skill-dot"></span>Codeigniter / Laravel</li>
+                        <li><span class="skill-dot"></span>XAMPP</li>
+                    </ul>
+                </div>
+
+                <div class="skill-group" id="skill-applied">
+                    <div class="skill-group-header">
+                        <span class="skill-icon">&#128736;</span>
+                        <h3>Methodologies &amp; Others</h3>
+                    </div>
+                    <ul class="skill-list">
+                        <li><span class="skill-dot"></span>Agile</li>
+                        <li><span class="skill-dot"></span>Project Management</li>
+                        <li><span class="skill-dot"></span>Database Management</li>
+                        <li><span class="skill-dot"></span>Tech Support &amp; Networking</li>
+                        <li><span class="skill-dot"></span>Hardware Servicing</li>
+                    </ul>
+                </div>
+
             </div>
+        </section>
+
+        <!-- CERTIFICATION & EDUCATION side-by-side -->
+        <div class="panel-duo" id="edu-cert-row">
+
+            <section id="certifications" class="panel panel-cert">
+                <div class="panel-label">05 / Certifications</div>
+                <h2 class="panel-title">Certifications &amp; Seminars</h2>
+                <div class="cert-item" id="cert-google-io">
+                    <!--I/O Extended Certificate-->
+                    <div class="cert-icon">&#127885;</div>
+                    <div class="cert-body">
+                        <h3>Google I/O Extended</h3>
+                        <h5>Status: Completed</h5>
+                        <span class="tl-date">Google Developer Group Bacolod | 2025</span>
+                        <p>Completed training on the application of Artificial Intelligence in modern web development.
+                            Acquired practical knowledge in leveraging AI technologies and utilizing
+                            <strong>Google Firebase</strong> for building scalable web applications, including user
+                            authentication, cloud storage, and real-time database integration.
+                        </p>
+                    </div>
+                </div>
+                <!--Cisco Certification-->
+                <div style="margin-top: 2rem;" class="cert-item" id="cert-cisco-networking">
+                    <!--Cisco Networking Basics Certificate-->
+                    <div class="cert-icon">&#127885;</div>
+                    <div class="cert-body">
+                        <h3>Cisco Networking Basics</h3>
+                        <h5>Status: Ongoing</h5>
+                        <span class="tl-date">Cisco Networking Academy | 2026</span>
+                        <p>In-Progress: Enrolled in Cisco's Networking Basics course to build foundational knowledge in
+                            networking concepts, including network architecture, devices, and protocols. This
+                            certification will enhance skills in network setup, management, and troubleshooting,
+                            complementing the web development expertise with a strong understanding of network
+                            infrastructure and security.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="education" class="panel panel-edu">
+                <div class="panel-label">06 / Education</div>
+                <h2 class="panel-title">Education</h2>
+                <div class="edu-item" id="edu-sti">
+                    <div class="edu-icon">&#127891;</div>
+                    <div class="edu-body">
+                        <h3>STI West Negros University</h3>
+                        <span class="tl-date">Bachelor of Science in Information Technology | 2022 &ndash; 2026</span>
+                        <p>Gained essential knowledge in software and web development, database management, system
+                            integration, and networking. Developed strong foundations in programming languages such as
+                            <strong>Java</strong>, <strong>PHP</strong>, <strong>MySQL</strong>, and
+                            <strong>Python</strong>.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
-        <!-- SKILLS SECTION -->
-        <section id="skills" class="section">
-            <h2>Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <ul>
-                        <li>Java (OOP)</li>
-                        <li>React Native</li>
-                        <li>Firebase</li>
-                        <li>Python</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Technologies</h3>
-                    <ul>
-                        <li>PHP</li>
-                        <li>CSS / HTML / JavaScript</li>
-                        <li>MySQL / PHPMyadmin</li>
-                        <li>Firebase/Firestore</li>
-                        <li>Bootstrap</li>
-                        <li>Codeigniter/Laravel Framework</li>
-                        <li>XAMPP</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3>Methodologies & Applied</h3>
-                    <ul>
-                        <li>Agile Methodology</li>
-                        <li>Project Management</li>
-                        <li>Database Management</li>
-                        <li>Tech Support & Networking</li>
-                        <li>Hardware Servicing</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
     </main>
 
-    <footer>
-        <p>&copy; 2026 Carlos Hilarion Siason. All Rights Reserved.</p>
+    <!-- FOOTER -->
+    <footer class="footer" id="main-footer">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <span class="footer-logo">CHS</span>
+                <p>Carlos Hilarion Siason<br>Information Technology Specialist</p>
+            </div>
+            <div class="footer-links">
+                <a href="mailto:carloshilarionsiason@gmail.com" id="footer-email">carloshilarionsiason@gmail.com</a>
+                <a href="https://github.com/carlosBSIT" target="_blank" id="footer-portfolio">Github Profile
+                    &#8599;</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Carlos Hilarion Siason. All Rights Reserved.</p>
+        </div>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 
